@@ -7,8 +7,7 @@ module half_adder_tb;
     reg a, b;
     wire sum, carry;
 
-    // duration for each bit = 20 * timescale = 20 * 1 ns  = 20ns
-    localparam period = 5;  
+    localparam period = 5;
 
     half_adder DUT (.a(a), .b(b), .sum(sum), .carry(carry));
     
