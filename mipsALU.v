@@ -8,13 +8,13 @@ module mipsALU(alu_ctl, a, b, alu_out, zero);
 	assign zero = (alu_out == 0); //zero is true if alu_out is 0; goes anywhere
 	always @(alu_ctl, a, b) begin
 		case(alu_ctl)
-			0: alu_out <= a & b; // and
-			1: alu_out <= a | b; // or
-			2: alu_out <= a + b; // add
-			6: alu_out <= a - b; // sub
-			7: alu_out <= a < b ? 1:0; // slt
-			12: alu_out <= ~(a | b); // nor
+			4'b0000: alu_out = a & b; // and
+			4'b0001: alu_out = a | b; // or
+			4'b0010: alu_out = a + b; // add
+			4'b0110: alu_out = a - b; // sub
+			4'b0111: alu_out = a < b ? 1:0; // slt
+			4'b1100: alu_out = ~(a | b); // nor
 			default: alu_out <= 0; // fuck all
 		endcase
 	end
-endmodule	
+endmodule
