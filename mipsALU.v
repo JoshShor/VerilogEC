@@ -12,7 +12,7 @@ module mipsALU(alu_ctl, a, b, alu_out, zero);
 			4'b0001: alu_out = a | b; // or
 			4'b0010: alu_out = a + b; // add
 			4'b0110: alu_out = a - b; // sub
-			4'b0111: alu_out = a < b ? 1:0; // slt
+			4'b0111: alu_out = a < b ?8'd1:8'd0 ; // slt
 			4'b1100: alu_out = ~(a | b); // nor
 			default: alu_out <= 0; // f all
 		endcase

@@ -15,28 +15,28 @@ module mipsALU_tb;
 		 $dumpfile("alu.vcd");
 		 $dumpvars(1,mipsALU_tb);
 		 alu_ctl = 4'b0000;
-		 a = 8'b0000001;
-		 b = 8'b0000011;
+		 a = 8'b00000001;
+		 b = 8'b00000011;
 		 #period; // wait for period	
  		 alu_ctl = 4'b0001;
-		 a = 8'b0000000;
-		 b = 8'b0000001;
+		 a = 8'b00000010;
+		 b = 8'b00000101;
 		 #period; // wait for period
  		 alu_ctl = 4'b0010;
-		 a = 8'b0000000;
-		 b = 8'b0000001;
+		 a = 8'b00100010;
+		 b = 8'b00001011;
 		 #period; // wait for period
  		 alu_ctl = 4'b0110;
-		 a = 8'b0000000;
-		 b = 8'b0000001;
+		 a = 8'b00001100;
+		 b = 8'b00000011;
 		 #period; // wait for period
  		 alu_ctl = 4'b0111;
-		 a = 8'b0000000;
-		 b = 8'b0000001;
+		 a = 8'b00110101;
+		 b = 8'b00011001;
 		 #period; // wait for period
  		 alu_ctl = 4'b1100;
-		 a = 8'b0000000;
-		 b = 8'b0000001;
+		 a = 8'b00000111;
+		 b = 8'b00010001;
 		 #period; // wait for period 	 
 	end
 endmodule
