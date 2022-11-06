@@ -14,7 +14,7 @@ module mipsALU(alu_ctl, a, b, alu_out, zero);
 			4'b0110: alu_out = a - b; // sub
 			4'b0111: alu_out = a < b ? 1:0; // slt
 			4'b1100: alu_out = ~(a | b); // nor
-			default: alu_out <= 0; // fuck all
+			default: alu_out <= 0; // f all
 		endcase
 	end
 endmodule
